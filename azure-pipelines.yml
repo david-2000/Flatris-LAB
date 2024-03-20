@@ -25,3 +25,8 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'flatris_artifact'
     publishLocation: 'Container'
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'flatris-pipline-artifact'
+    publishLocation: 'pipeline'
